@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Properties
+    var pictures = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,12 @@ class ViewController: UIViewController {
             
             if item.hasPrefix("nssl") {
                 //This is a picture to load!!
+                pictures.append(item)
                 
             }
         }
+        
+        print(pictures)
         
     }
 
