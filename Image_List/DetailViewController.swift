@@ -27,5 +27,9 @@ class DetailViewController: UIViewController {
         navigationController?.hidesBarsOnTap = true
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnTap = false 
+    }
 
 }
