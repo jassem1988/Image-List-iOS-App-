@@ -47,7 +47,9 @@ class ViewController: UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.selectedImage = pictures[indexPath.row]
+        }
         
     }
 
