@@ -29,7 +29,7 @@ class ViewController: UITableViewController  {
             if item.hasPrefix("nssl") {
                 //This is a picture to load!!
                 pictures.append(item)
-                
+                pictures.sort()
             }
         }
         
