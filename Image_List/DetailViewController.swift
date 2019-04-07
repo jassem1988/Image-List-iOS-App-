@@ -21,6 +21,8 @@ class DetailViewController: UIViewController {
         
         title = "\(selectedImage!) \(numberOfPicture) of \(totalPictures)"
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         navigationItem.largeTitleDisplayMode = .never
 
         if let imageToLoad = selectedImage {
