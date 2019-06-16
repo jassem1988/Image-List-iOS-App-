@@ -21,6 +21,10 @@ class ViewController: UITableViewController  {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendTapped))
         
+        performSelector(inBackground: #selector(loadImages), with: nil)
+    }
+    
+    @objc func loadImages() {
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -36,7 +40,6 @@ class ViewController: UITableViewController  {
         }
         
         print(pictures)
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
